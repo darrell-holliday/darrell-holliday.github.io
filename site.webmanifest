@@ -1,0 +1,16 @@
+{
+  "name": "Darrell Holliday",
+  "short_name": "Darrell Holliday",
+  "description": "Business coach and consultant. I help online entrepreneurs build AI-powered businesses that make real money.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#12161C",
+  "theme_color": "#12161C",
+  "icons": [
+    {
+      "src": "/assets/mark/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
