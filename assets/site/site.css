@@ -172,3 +172,4 @@ input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px;bo
   .optin{padding-top:56px}
   .note{font-size:1.4rem}
 }
+.split > .page__head{margin-bottom:0}
