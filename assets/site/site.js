@@ -23,18 +23,19 @@
   }
   document.addEventListener('submit',function(e){
     var f=e.target;if(!(f instanceof HTMLFormElement))return;
-    var email=f.querySelector('input[type=email]'),err=f.querySelector('.err');
-    if(email&&!email.checkValidity()){
+    var err=f.querySelector('.err'),bad=null;
+    f.querySelectorAll('[required]').forEach(function(i){if(!bad&&!i.checkValidity())bad=i});
+    if(bad){
       e.preventDefault();
-      if(err){err.hidden=false;err.textContent='Enter an email address so I can send you the playbook.';}
-      email.focus();return;
+      if(err){err.hidden=false;err.textContent=bad.getAttribute('data-msg')||'Please fill in this field.';}
+      bad.setAttribute('aria-invalid','true');bad.focus();return;
     }
     ev('form_submit',{form:f.getAttribute('data-form')||'form'});
   });
   document.addEventListener('click',function(e){
     var a=e.target&&e.target.closest?e.target.closest('a,button'):null;if(!a)return;
-    if(a.classList.contains('submit'))ev('cta_click',{cta:'submit',label:(a.textContent||'').trim()});
+    if(a.hasAttribute('data-cta'))ev('cta_click',{cta:a.getAttribute('data-cta'),label:(a.textContent||'').trim()});
     if(a.hasAttribute('data-download'))ev('file_download',{file_name:'start-with-one-offer.pdf',link_url:a.href});
-    if(a.tagName==='A'&&a.href){try{var u=new URL(a.href,location.origin);if(u.origin!==location.origin)ev('outbound_click',{url:u.href,link_text:(a.textContent||'').trim()})}catch(_){}}
+    if(a.tagName==='A'&&a.href){try{var u=new URL(a.href,location.origin);if(u.origin!==location.origin&&u.protocol.indexOf('http')===0)ev('outbound_click',{url:u.href,link_text:(a.textContent||'').trim()})}catch(_){}}
   });
 })();
