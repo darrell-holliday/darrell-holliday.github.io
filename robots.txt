@@ -1,5 +1,3 @@
 User-agent: *
-Allow: /
-Disallow: /guide/
-
-Sitemap: https://darrellholliday.com/sitemap.xml
+Disallow: /
+Allow: /googlecc0a36deea176764.html
