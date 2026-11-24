@@ -34,7 +34,7 @@
   document.addEventListener('click',function(e){
     var a=e.target&&e.target.closest?e.target.closest('a,button'):null;if(!a)return;
     if(a.classList.contains('submit'))ev('cta_click',{cta:'submit',label:(a.textContent||'').trim()});
-    if(a.hasAttribute('data-download'))ev('file_download',{file_name:'sell-one-offer-first.pdf',link_url:a.href});
+    if(a.hasAttribute('data-download'))ev('file_download',{file_name:'start-with-one-offer.pdf',link_url:a.href});
     if(a.tagName==='A'&&a.href){try{var u=new URL(a.href,location.origin);if(u.origin!==location.origin)ev('outbound_click',{url:u.href,link_text:(a.textContent||'').trim()})}catch(_){}}
   });
 })();
