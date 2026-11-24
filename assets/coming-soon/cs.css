@@ -61,3 +61,7 @@ aside p{font-size:16px;margin-top:20px}
   .submit{justify-self:stretch}
   .single{padding:56px 0 72px}
 }
+.legal h2{margin:40px 0 12px}
+.legal ul{padding-left:20px;margin:0 0 16px}
+.legal li{margin:0 0 6px}
+.foot__links{display:flex;gap:20px}
