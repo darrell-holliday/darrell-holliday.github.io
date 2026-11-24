@@ -43,8 +43,8 @@ p{margin:0 0 16px;max-width:62ch}
 /* hero */
 .hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:72px;align-items:end;padding:72px 0 0}
 .hero__copy{padding-bottom:88px}
-.hero h1{max-width:11ch;margin-bottom:28px}
-.hero .lede{max-width:34ch}
+.hero h1{max-width:13ch;margin-bottom:28px;font-size:clamp(2.5rem,1.3rem + 3.8vw,4.5rem)}
+.hero .lede{max-width:40ch}
 .hero__photo{position:relative}
 .hero__photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:4px 4px 0 0}
 /* proof */
