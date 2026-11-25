@@ -8,6 +8,10 @@ User-agent: meta-externalagent
 Allow: /invictus-mali-dm/
 
 User-agent: *
-Allow: /invictus-mali-dm/
-Allow: /googlecc0a36deea176764.html
-Disallow: /
+Allow: /
+Disallow: /thanks-guide/
+Disallow: /thanks-call/
+Disallow: /thanks-waitlist/
+Disallow: /guide/
+
+Sitemap: https://darrellholliday.com/sitemap.xml
