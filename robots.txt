@@ -8,5 +8,6 @@ User-agent: meta-externalagent
 Allow: /invictus-mali-dm/
 
 User-agent: *
-Disallow: /
+Allow: /invictus-mali-dm/
 Allow: /googlecc0a36deea176764.html
+Disallow: /
