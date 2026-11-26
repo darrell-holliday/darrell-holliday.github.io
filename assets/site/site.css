@@ -789,3 +789,18 @@ input[aria-invalid=true]{border-color:var(--danger)}
   .pg-lp .insides__list::after{transform:scaleY(1)}
   .pg-lp .book-tilt{transform:none}
 }
+
+
+/* ---------- v8: tools strip (monochrome gold marks via mask) ---------- */
+.tools{position:relative}
+.tools__inner{padding:34px 0 38px;display:grid;gap:22px}
+.tools__row{display:grid;gap:12px}
+.tools__label{margin:0;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.tools__marks{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:18px 40px}
+.tools__marks li{margin:0;display:flex;align-items:center}
+.mark{display:block;height:26px;width:var(--w,150px);background:var(--gold-lo);-webkit-mask:var(--src) center/contain no-repeat;mask:var(--src) center/contain no-repeat;opacity:.9;transition:opacity .25s var(--ease-io,ease),background .25s}
+.mark:hover{opacity:1;background:var(--gold-hi)}
+.mark--word{display:inline-block;height:auto;width:auto;background:none;-webkit-mask:none;mask:none;font-family:var(--display);font-weight:500;font-size:1.35rem;letter-spacing:-.01em;color:var(--gold-lo)}
+.tools__cap{margin:0;color:var(--muted);font-size:15px;max-width:62ch}
+@media (min-width:900px){.tools__inner{grid-template-columns:1fr 1fr;gap:28px 56px}.tools__cap{grid-column:1/-1}}
+@media (max-width:600px){.mark{height:22px;width:calc(var(--w,150px)*.85)}.tools__marks{gap:16px 28px}}
